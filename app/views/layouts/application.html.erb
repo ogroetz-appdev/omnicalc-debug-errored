@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Omnicalc Debug</title>
+    <%= csrf_meta_tags %>
+
+    <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+    <meta charset="utf-8">
+
+    <!-- Make it responsive to small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+    <table style="width: 100%; margin-bottom: 3em;" border="1">
+      <tr>
+        <td>
+          <strong>Omnicalc</strong>
+        </td>
+
+        <td>
+          <a href="/calendar_invite/new">
+            Calendar Invite
+          </a>
+        </td>
+        
+        <td>
+          <a href="/street-to-coords/new">
+            Street to Coordinates
+          </a>
+        </td>
+
+        <td>
+          <a href="/coords-to-weather/new">
+            Coordinates to Weather
+          </a>
+        </td>
+
+        <td>
+          <a href="/street-to-weather/new">
+            Street to Weather
+          </a>
+        </td>
+      </tr>
+    </table>
+    <%= yield %>
+  </body>
+</html>
