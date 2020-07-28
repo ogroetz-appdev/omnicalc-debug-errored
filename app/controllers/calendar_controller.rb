@@ -7,7 +7,7 @@ class CalendarController < ApplicationController
 
   def generate
     @name = params.fetch("event_name")
-    @details = params.fetch("detail")
+    @details = params.fetch("event_details")
     @location = params.fetch("event_location")
 
     regular_start_date = params.fetch("start_time")
