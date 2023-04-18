@@ -17,9 +17,9 @@ class MeteorologistController < ApplicationController
 
     @lng = location.fetch("lng").to_s
 
-    dark_sky_key = ENV.fetch("DARK_SKY_KEY")
+    pirate_weather_key = ENV.fetch("PIRATE_WEATHER_KEY")
 
-    api_url = "https://api.darksky.net/forecast/"+ dark_sky_key + "/" + @lat + "," +  @lng
+    api_url = "https://api.pirateweather.net/forecast/"+ pirate_weather_key + "/" + @lat + "," +  @lng
     
     api_response = open(api_url).read
     results = JSON.parse(api_response)

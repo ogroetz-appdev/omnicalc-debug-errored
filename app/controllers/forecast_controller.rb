@@ -3,9 +3,9 @@ class ForecastController < ApplicationController
     @lat = params.fetch("user_latitude")
     @lng = params.fetch("user_longitude")
 
-    key = ENV.fetch("DARK_SKY_KEY")
+    key = ENV.fetch("PIRATE_WEATHER_KEY")
 
-    api_url = "https://api.darksky.net/forecast/"+ key + "/" + @lat + "," +  @lng
+    api_url = "https://api.pirateweather.net/forecast/"+ key + "/" + @lat + "," +  @lng
     
     api_response = open(api_url).read
     results = JSON.parse(api_response)
